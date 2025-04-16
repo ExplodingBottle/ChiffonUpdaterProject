@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="../res/img/icon_globe.png">
+    <title>External library integration guide</title>
+</head>
+
+<body>
+    <h1>External library integration guide</h1>
+    There are two cases to consider when integrating the external library into one of your product. These two cases are:
+    <ol>
+        <li>
+            Your product is a Java application
+        </li>
+        <li>
+            Your product is not a Java application
+        </li>
+    </ol>
+    <div>
+        <h3>General instructions</h3>
+        In any cases, the application when it starts should always try to do a call to the external library. Below
+        describes how to run this call according to each situation.
+    </div>
+    <div>
+        <h3>Case 1: Your product is a Java application</h3>
+        Assuming that the reporting file is the binary of the Java application, you should run this code in <i>main</i>
+        or somewhere else:
+        <pre>
+ChiffonUpdaterTool updaterTool = new ChiffonUpdaterTool(false);
+if (updaterTool.initialize()) {
+	try {
+		updaterTool.registerProgram(
+				new File(this.getClass().getProtectionDomain().getCodeSource().getLocation().toURI()));
+	} catch (URISyntaxException e) {
+		// You can choose to let this like this or handle the error your way.
+	}
+}
+        </pre>
+        If needed, you can also check the Javadoc of the ChiffonUpdaterTool class. In the case the piece of software
+        which runs this code isn't the reporting file, do this instead:
+        <pre>
+File reportingFile = ....;
+ChiffonUpdaterTool updaterTool = new ChiffonUpdaterTool(false);
+if (updaterTool.initialize()) {
+		updaterTool.registerProgram(reportingFile);
+}
+        </pre>
+    </div>
+    <div>
+        <h3>Case 2: Your product is not a Java application</h3>
+        In the case your application is not a Java application, it should run a command such as:<br>
+        <code>
+            java -Dcuwrapper.command=regbin -Dcuwrapper.binaryFile="&lt;absolute path of the reporting file&gt;" -Dcuwrapper.logOnConsole=false -jar "&lt;absolute path of the external library&gt;"
+        </code><br>
+        Here, <i>java</i> could be from any Java Runtime Environment (JRE).<br>
+        You can also choose to enable console logging by chaning <i>-Dcuwrapper.logOnConsole=false</i> to
+        <i>-Dcuwrapper.logOnConsole=true</i><br>
+        For a full list of options of the external library, check <a href="runoptions.html">the technical documentation page on run options</a>
+    </div>
+</body>
+
+</html>

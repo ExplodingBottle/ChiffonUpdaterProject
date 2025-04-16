@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="../res/img/icon_globe.png">
+    <title>External library run options</title>
+</head>
+
+<body>
+    <h1>External library run options</h1>
+    Different properties supported by the external library (passed in by the -D Java option):
+    <ul>
+        <li>
+            cuwrapper.command: Chooses the command which the external library will run. The different commands are:
+            <table>
+                <tr>
+                    <th>Command name</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <th>hash</th>
+                    <th>Prints the hash of the file denoted by cuwrapper.binaryFile</th>
+                </tr>
+                <tr>
+                    <th>regbin</th>
+                    <th>Registers to the local product list the file denoted by cuwrapper.binaryFile</th>
+                </tr>
+                <tr>
+                    <th>updatelist</th>
+                    <th>Runs an update task on the local product list (cleans up invalid entries)</th>
+                </tr>
+                <tr>
+                    <th>license</th>
+                    <th>Tells with a message where to find the license file</th>
+                </tr>
+            </table>
+        </li>
+        <li>
+            cuwrapper.binaryFile: This property denotes the path of the binary file if applicable.
+        </li>
+        <li>
+            cuwrapper.logOnConsole: If this is set to "true", messages can be output on the console.
+        </li>
+    </ul>
+</body>
+
+</html>
