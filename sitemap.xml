@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <url>
+      <loc>https://explodingbottle.github.io/ChiffonUpdaterProject/</loc>
+      <priority>1.0</priority>
+      <lastmod>2025-04-16</lastmod>
+   </url>
+   <url>
+      <loc>https://explodingbottle.github.io/ChiffonUpdaterProject/get_started.html</loc>
+      <priority>0.9</priority>
+      <lastmod>2025-04-16</lastmod>
+   </url>
+   <url>
+      <loc>https://explodingbottle.github.io/ChiffonUpdaterProject/demo.html</loc>
+      <priority>0.8</priority>
+      <lastmod>2025-04-16</lastmod>
+   </url>
+   <!-- Techdocs -->
+   <url>
+      <loc>https://explodingbottle.github.io/ChiffonUpdaterProject/techdocs/</loc>
+      <priority>0.7</priority>
+      <lastmod>2025-04-16</lastmod>
+   </url>
+   <url>
+      <loc>https://explodingbottle.github.io/ChiffonUpdaterProject/techdocs/toolkit/customization.html</loc>
+      <priority>0.65</priority>
+      <lastmod>2025-04-16</lastmod>
+   </url>
+   <url>
+      <loc>https://explodingbottle.github.io/ChiffonUpdaterProject/techdocs/toolkit/eula.html</loc>
+      <priority>0.65</priority>
+      <lastmod>2025-04-16</lastmod>
+   </url>
+   <url>
+      <loc>https://explodingbottle.github.io/ChiffonUpdaterProject/techdocs/extlib/integration.html</loc>
+      <priority>0.65</priority>
+      <lastmod>2025-04-16</lastmod>
+   </url>
+   <url>
+      <loc>https://explodingbottle.github.io/ChiffonUpdaterProject/techdocs/extlib/runoptions.html</loc>
+      <priority>0.65</priority>
+      <lastmod>2025-04-16</lastmod>
+   </url>
+</urlset>
